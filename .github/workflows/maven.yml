@@ -32,7 +32,7 @@ jobs:
 
   fork_setup:
     runs-on: ubuntu-latest
-    # if: ${{ github.event_name == 'pull_request' }}
+    if: ${{ github.event_name == 'pull_request' }}
     outputs:
       base_repo: ${{ steps.base_repo.outputs.name }}
       is_fork: ${{ steps.is_fork.outputs.is_fork }}
